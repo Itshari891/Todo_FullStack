@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8" id="column">
+            <h1 class="task">Add Task</h1>
+            <div class="input-group mb-3">
+                <input [(ngModel)]="todo.task" (click)="hide()" type="text" class="form-control" name="todo" id="inputtodo" placeholder="Add task..">
+                
+                  <button  type="submit" class="btn btn-outline-secondary"  (click)="addTodoView() ">Add</button>             
+              </div>
+
+                  <div class="message {{ (message=='Todo created Successfully' ? 'show':'') }} ">{{message}}</div>   
+                  <button type="button" routerLink="/mytodos" id="link" class="btn">my Todos</button>    
+        </div>
+        <div class="col-2" > 
+
+        </div>
+    </div> 
+  

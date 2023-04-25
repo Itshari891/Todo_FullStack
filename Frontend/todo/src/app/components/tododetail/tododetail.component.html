@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 mt-5">
+            <div class="card text-center">
+                <div class="card-header">
+                  <p>task : {{todo.id}}</p>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{todo.task}}</h5>
+
+                  <p class="card-text">created on : {{todo.created_date.slice(0,10)}}</p>
+                  <a  (click)="todostat(todo.id)" (click)="todoEdit(todo.id)"  class="btn btn-outline-secondary m-3">{{status}}</a>
+                  <a (click)="todoRemove(todo.id)" class="btn btn-outline-danger">remove</a>
+                  <div></div>
+                </div>
+                <div class="card-footer text-muted">
+                  <button routerLink="/mytodos" class="btn btn-warning m-3">back</button>
+                  <button routerLink="/todo"  class="btn btn-warning"> Add new</button>
+                 
+                </div>  
+              </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
